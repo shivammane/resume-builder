@@ -1,0 +1,39 @@
+<div class="left-side">
+  <div class="info-container">
+    <app-personal-info></app-personal-info>
+  </div>
+  <div class="info-container">
+    <app-skills></app-skills>
+  </div>
+  <div class="info-container">
+    <app-languages></app-languages>
+  </div>
+  <div class="info-container">
+    <app-summary></app-summary>
+  </div>
+  <div class="info-container">
+    <app-projects></app-projects>
+  </div>
+  <div class="info-container">
+    <app-certificates></app-certificates>
+  </div>
+  <div class="info-container">
+    <app-education></app-education>
+  </div>
+
+  <div class="info-container">
+    <button class="btn btn-success print" (click)="printResume()">
+      Print-Resume
+    </button>
+    <button class="btn btn-danger reset" (click)="resetResume()">
+      Reset-Resume
+    </button>
+  </div>
+</div>
+<div class="right-side">
+  <!-- <ng-container *ngComponentOutlet="template"></ng-container> -->
+  <!-- pass data to dynamic component -->
+  <ng-container
+    *ngComponentOutlet="template; injector: personal_inf()"
+  ></ng-container>
+</div>

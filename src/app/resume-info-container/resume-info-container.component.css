@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.right-side {
+  position: absolute;
+  display: inline-block;
+  box-shadow: 0 0 5px black;
+  right: 0;
+}
+
+.left-side {
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 45%;
+  max-height: 29.7cm;
+  overflow-y: scroll;
+  box-shadow: 0 0 5px black;
+  text-align: center;
+}
+
+.print,
+.reset {
+  padding: 0.3em 3.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.1em 0.1em;
+}
+
+.info-container {
+  /* margin-bottom: 1rem; */
+  border-style: solid;
+  padding: 1rem;
+}

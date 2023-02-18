@@ -1,0 +1,14 @@
+input {
+  padding: 2px;
+  margin: 0.5rem 1rem;
+  width: 80%;
+}
+h4 {
+  position: relative;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: white;
+}
+label {
+  font-weight: bold;
+}

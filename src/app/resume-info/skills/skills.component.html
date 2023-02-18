@@ -1,0 +1,14 @@
+<h4 class="heading">SKILLS</h4>
+<form #info="ngForm" (key.enter)="skill(info)" (ngSubmit)="skill(info)">
+  <label for="skill">skill : </label>
+  <br />
+  <input
+    type="text"
+    name="skill"
+    id="skill"
+    placeholder="e.g. Java (add one by one)"
+    ngModel
+  />
+  <br />
+  <button class="btn btn-success">add Skill</button>
+</form>

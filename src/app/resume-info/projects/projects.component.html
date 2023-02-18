@@ -1,0 +1,25 @@
+<h4>PROJECTS</h4>
+<form #info="ngForm" (key.enter)="project(info)" (ngSubmit)="project(info)">
+  <label for="project">project Name : </label>
+  <br />
+  <input
+    type="text"
+    name="project"
+    id="project"
+    placeholder="e.g. Resume Builder (add one by one)"
+    ngModel
+  />
+  <label for="project_points">Project Points : </label>
+  <input
+    type="text"
+    name="project_points"
+    id="project_points"
+    placeholder="add points about above project one by one here (optional)"
+    ngModel
+  />
+  <div (click)="project_detail(info)" class="btn btn-sm btn-outline-primary">
+    add point
+  </div>
+  <br />
+  <button class="btn btn-success">add project</button>
+</form>

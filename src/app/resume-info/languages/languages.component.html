@@ -1,0 +1,26 @@
+<h4>LANGUAGES</h4>
+<form #info="ngForm" (key.enter)="language(info)" (ngSubmit)="language(info)">
+  <label for="language">language : </label>
+  <input
+    type="text"
+    name="language"
+    id="language"
+    placeholder="e.g. English (add one by one)"
+    ngModel
+  />
+  <br />
+  <label for="proficiency">proficiency : </label>
+  <input
+    type="range"
+    step="25"
+    name="proficiency"
+    id="proficiency"
+    (change)="proficiency = info.value.proficiency"
+    ngModel
+  />
+  <div class="proficiency">
+    {{ proficiency }}
+  </div>
+  <br />
+  <button class="btn btn-success">add language</button>
+</form>

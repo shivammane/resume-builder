@@ -1,0 +1,115 @@
+<main>
+  <header
+    class="details-container imp-container shadow"
+    *ngIf="personal_info.name"
+  >
+    <h1>{{ personal_info.name }}</h1>
+    <h5 class="link" *ngIf="personal_info.email">
+      <fa-icon [icon]="email_icon"></fa-icon>
+      <a href="mailto:{{ personal_info.email }}"> email</a>
+    </h5>
+    <h5 class="link" *ngIf="personal_info.github">
+      <fa-icon [icon]="github_icon"></fa-icon>
+      <a href="{{ personal_info.github }}" target="_blank"> github</a>
+    </h5>
+    <h5 class="link" *ngIf="personal_info.linkedin">
+      <fa-icon [icon]="linkedin_icon"></fa-icon>
+      <a href="{{ personal_info.linkedin }}" target="_blank"> Linkedin</a>
+    </h5>
+    <h5 class="link" *ngIf="personal_info.mobile">
+      <fa-icon [icon]="mobile_icon"></fa-icon>
+      <a href="tel:{{ personal_info.mobile }}"> {{ personal_info.mobile }}</a>
+    </h5>
+  </header>
+  <div class="left">
+    <div *ngIf="skills.length">
+      <h6 class="section-heading">SKILLS</h6>
+      <section class="details-container shadow">
+        <div class="skill imp-container" *ngFor="let skill of skills">
+          {{ skill }}
+        </div>
+      </section>
+    </div>
+    <div *ngIf="languages.length">
+      <h6 class="section-heading">LANGUAGES</h6>
+      <section class="details-container shadow">
+        <ul class="main-points">
+          <li *ngFor="let language of languages">
+            {{ language.language }}
+            <div class="progress" *ngIf="language.proficiency">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                [style.width.%]="language.proficiency"
+                [attr.aria-valuenow]="language.proficiency"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                {{ language.proficiency }}%
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+  <div class="right">
+    <div *ngIf="summary.summary">
+      <h6 class="section-heading">SUMMARY</h6>
+      <section class="details-container shadow">
+        <div [innerHTML]="summary.summary"></div>
+      </section>
+    </div>
+    <div *ngIf="projects.length">
+      <h6 class="section-heading">PROJECTS</h6>
+      <section class="details-container imp-container shadow">
+        <ul class="main-points">
+          <li *ngFor="let project of projects">
+            <div [innerHTML]="project.project + ' :'"></div>
+            <ul class="sub-points" *ngIf="project.project_points.length">
+              <li *ngFor="let project_point of project.project_points">
+                <div [innerHTML]="project_point"></div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div *ngIf="certificates.length">
+      <h6 class="section-heading">CERTIFICATES</h6>
+      <section class="details-container shadow">
+        <ul class="main-points">
+          <li *ngFor="let certificate of certificates">
+            <div [innerHTML]="certificate.certificate"></div>
+            <ul
+              class="sub-points"
+              *ngIf="certificate.certificate_points.length"
+            >
+              <li
+                *ngFor="let certificate_point of certificate.certificate_points"
+              >
+                <div [innerHTML]="certificate_point"></div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div *ngIf="educations.length">
+      <h6 class="section-heading">EDUCATION</h6>
+      <section class="details-container shadow">
+        <ul class="main-points">
+          <li *ngFor="let education of educations">
+            <div [innerHTML]="education.degree_name"></div>
+            <ul class="sub-points" *ngIf="education.college_name">
+              <li>
+                <div [innerHTML]="education.college_name"></div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+  <footer></footer>
+</main>

@@ -1,0 +1,33 @@
+<h4>CERTIFICATES</h4>
+<form
+  #info="ngForm"
+  (key.enter)="certificate(info)"
+  (ngSubmit)="certificate(info)"
+>
+  <label for="certificate">Certificate Name : </label>
+  <br />
+  <input
+    type="text"
+    name="certificate"
+    id="certificate"
+    placeholder="e.g. [certificate provider] : [certificate name] (add one by one)"
+    ngModel
+  />
+  <br />
+  <label for="certificate_points">Certificate Points : </label>
+  <br />
+  <input
+    type="text"
+    name="certificate_points"
+    id="certificate_points"
+    placeholder="add points about above certificate one by one here (optional)"
+    ngModel
+  />
+  <div
+    (click)="certificate_detail(info)"
+    class="btn btn-sm btn-outline-primary"
+  >
+    add point
+  </div>
+  <button class="btn btn-success">add certificate</button>
+</form>

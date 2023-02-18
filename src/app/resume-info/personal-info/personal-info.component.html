@@ -1,0 +1,68 @@
+<h4>PERSONAL INFO</h4>
+<form
+  #info="ngForm"
+  (key.enter)="personal_info(info)"
+  (ngSubmit)="personal_info(info)"
+>
+  <label for="name">Name :</label>
+  <br />
+  <input
+    (focusout)="update()"
+    type="text"
+    name="name"
+    id="name"
+    placeholder="e.g. Sachine Tendulkar"
+    ngModel
+    [(ngModel)]="name"
+  />
+  <br />
+  <label for="email">Email :</label>
+  <br />
+  <input
+    (focusout)="update()"
+    type="text"
+    name="email"
+    id="email"
+    placeholder="e.g. abc123@gmail.com (optional)"
+    ngModel
+    [(ngModel)]="email"
+  />
+  <br />
+  <label for="github">Github Link :</label>
+  <br />
+  <input
+    (focusout)="update()"
+    type="text"
+    name="github"
+    id="github"
+    placeholder="e.g. https://github.com/[account-name] (optional)"
+    ngModel
+    [(ngModel)]="github"
+  />
+  <br />
+  <label for="linkedin">Linkedin Link :</label>
+  <br />
+  <input
+    (focusout)="update()"
+    type="text"
+    name="linkedin"
+    id="linkedin"
+    placeholder="e.g. https://www.linkedin.com/in/[account-name] (optional)"
+    ngModel
+    [(ngModel)]="linkedin"
+  />
+  <br />
+  <label for="mobile">Mobile Number : </label>
+  <br />
+  <input
+    (focusout)="update()"
+    type="text"
+    name="mobile"
+    id="mobile"
+    placeholder="e.g. +91 1234567890 (optional)"
+    ngModel
+    [(ngModel)]="mobile"
+  />
+  <br />
+  <button class="btn btn-success">add personal info</button>
+</form>

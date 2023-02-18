@@ -1,0 +1,24 @@
+<h4>EDUCATION</h4>
+<form #info="ngForm" (key.enter)="education(info)" (ngSubmit)="education(info)">
+  <label for="degree_name">Degree/SSC/HSC/etc. Name : </label>
+  <br />
+  <input
+    type="text"
+    name="degree_name"
+    id="degree_name"
+    placeholder="e.g. [degree name] : [specialization] (add one by one)"
+    ngModel
+  />
+  <br />
+  <label for="college_name">College/School Name : </label>
+  <br />
+  <input
+    type="text"
+    name="college_name"
+    id="college_name"
+    placeholder="name of school/college from where you get degree (optional)"
+    ngModel
+  />
+  <br />
+  <button type="submit" class="btn btn-success">add education</button>
+</form>
