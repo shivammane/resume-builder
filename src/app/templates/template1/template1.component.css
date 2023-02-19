@@ -60,6 +60,10 @@ a {
   font-weight: bold;
 }
 
+li {
+  margin: 0.5rem 0;
+}
+
 .sub-points {
   font-weight: normal;
 }
