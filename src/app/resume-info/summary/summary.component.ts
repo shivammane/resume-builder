@@ -10,4 +10,9 @@ export class SummaryComponent {
   summary(data: NgForm) {
     sessionStorage.setItem("summary", JSON.stringify(data.value))
   }
+
+  reset(data: NgForm) {
+    data.resetForm()
+    sessionStorage.removeItem("summary")
+  }
 }

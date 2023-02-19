@@ -14,4 +14,9 @@ export class LanguagesComponent {
     sessionStorage.setItem("languages", JSON.stringify(this.languages));
     (<HTMLInputElement>document.querySelector('input[name="language"]')).value = '';
   }
+
+  reset(data: NgForm) {
+    data.resetForm()
+    sessionStorage.removeItem("languages")
+  }
 }

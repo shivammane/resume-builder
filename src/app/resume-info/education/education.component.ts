@@ -16,4 +16,9 @@ export class EducationComponent {
     (<HTMLInputElement>document.querySelector('input[name="degree_name"]')).value = '';
     (<HTMLInputElement>document.querySelector('input[name="college_name"]')).value = '';
   }
+
+  reset(data: NgForm) {
+    data.resetForm()
+    sessionStorage.removeItem("educations")
+  }
 }

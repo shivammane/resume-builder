@@ -15,4 +15,8 @@ export class SkillsComponent {
 
     (<HTMLInputElement>document.querySelector('input[name="skill"]')).value = '';
   }
+
+  reset(data: NgForm) {
+    sessionStorage.removeItem("skills")
+  }
 }

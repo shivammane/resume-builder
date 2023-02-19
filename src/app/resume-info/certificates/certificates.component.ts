@@ -22,4 +22,9 @@ export class CertificatesComponent {
     this.certificate_points = [];
     (<HTMLInputElement>document.querySelector('input[name="certificate"]')).value = '';
   }
+
+  reset(data: NgForm) {
+    data.resetForm()
+    sessionStorage.removeItem("certificates")
+  }
 }

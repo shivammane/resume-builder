@@ -22,4 +22,9 @@ export class ProjectsComponent {
     this.project_points = [];
     (<HTMLInputElement>document.querySelector('input[name="project"]')).value = '';
   }
+
+  reset(data: NgForm) {
+    data.resetForm()
+    sessionStorage.removeItem("projects")
+  }
 }

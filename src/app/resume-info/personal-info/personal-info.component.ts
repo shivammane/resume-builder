@@ -8,23 +8,12 @@ import { NgForm } from "@angular/forms";
 })
 export class PersonalInfoComponent {
 
-  name = ''
-  email = ''
-  mobile = ''
-  linkedin = ''
-  github = ''
-
-
   personal_info(data: NgForm) {
     sessionStorage.setItem("personal_info", JSON.stringify(data.value))
   }
 
-  update() {
-    const data = { name: this.name, email: this.email, linkedin: this.linkedin, github: this.github, mobile: this.mobile }
-    sessionStorage.setItem("personal_info", JSON.stringify(data))
-  }
-
-  print() {
-
+  reset(data: NgForm) {
+    data.resetForm()
+    sessionStorage.removeItem("personal_info")
   }
 }
