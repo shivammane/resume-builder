@@ -26,5 +26,6 @@ export class ProjectsComponent {
   reset(data: NgForm) {
     data.resetForm()
     sessionStorage.removeItem("projects")
+    this.projects = []
   }
 }

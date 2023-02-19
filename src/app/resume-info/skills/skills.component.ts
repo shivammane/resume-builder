@@ -18,5 +18,6 @@ export class SkillsComponent {
 
   reset(data: NgForm) {
     sessionStorage.removeItem("skills")
+    this.skills = []
   }
 }

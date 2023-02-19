@@ -26,5 +26,6 @@ export class CertificatesComponent {
   reset(data: NgForm) {
     data.resetForm()
     sessionStorage.removeItem("certificates")
+    this.certificates = []
   }
 }

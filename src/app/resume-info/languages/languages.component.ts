@@ -18,5 +18,6 @@ export class LanguagesComponent {
   reset(data: NgForm) {
     data.resetForm()
     sessionStorage.removeItem("languages")
+    this.languages = []
   }
 }

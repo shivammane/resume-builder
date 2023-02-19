@@ -20,5 +20,6 @@ export class EducationComponent {
   reset(data: NgForm) {
     data.resetForm()
     sessionStorage.removeItem("educations")
+    this.educations = []
   }
 }
