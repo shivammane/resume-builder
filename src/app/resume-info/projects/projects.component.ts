@@ -18,14 +18,14 @@ export class ProjectsComponent {
   project(data: NgForm) {
     this.project_name = data.value.project;
     this.projects.push({ project: this.project_name, project_points: this.project_points })
-    sessionStorage.setItem('projects', JSON.stringify(this.projects))
+    localStorage.setItem('projects', JSON.stringify(this.projects))
     this.project_points = [];
     (<HTMLInputElement>document.querySelector('input[name="project"]')).value = '';
   }
 
   reset(data: NgForm) {
     data.resetForm()
-    sessionStorage.removeItem("projects")
+    localStorage.removeItem("projects")
     this.projects = []
   }
 }

@@ -11,13 +11,13 @@ export class LanguagesComponent {
   languages: { language: string, proficiency: string }[] = []
   language(data: NgForm) {
     this.languages.push(data.value)
-    sessionStorage.setItem("languages", JSON.stringify(this.languages));
+    localStorage.setItem("languages", JSON.stringify(this.languages));
     (<HTMLInputElement>document.querySelector('input[name="language"]')).value = '';
   }
 
   reset(data: NgForm) {
     data.resetForm()
-    sessionStorage.removeItem("languages")
+    localStorage.removeItem("languages")
     this.languages = []
   }
 }

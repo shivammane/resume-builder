@@ -9,11 +9,11 @@ import { NgForm } from "@angular/forms";
 export class PersonalInfoComponent {
 
   personal_info(data: NgForm) {
-    sessionStorage.setItem("personal_info", JSON.stringify(data.value))
+    localStorage.setItem("personal_info", JSON.stringify(data.value))
   }
 
   reset(data: NgForm) {
     data.resetForm()
-    sessionStorage.removeItem("personal_info")
+    localStorage.removeItem("personal_info")
   }
 }

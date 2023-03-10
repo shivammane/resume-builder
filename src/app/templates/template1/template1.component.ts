@@ -12,13 +12,13 @@ import { faEnvelope, faMobileAndroid, faGlobe } from "@fortawesome/free-solid-sv
 export class Template1Component {
 
   // constructor(public personal_info: PersonalInfo) { }
-  personal_info = JSON.parse(sessionStorage.getItem("personal_info")! || "{}")
-  summary = JSON.parse(sessionStorage.getItem("summary") || "{}")
-  skills = JSON.parse(sessionStorage.getItem("skills") || "{}")
-  languages = JSON.parse(sessionStorage.getItem("languages") || "{}")
-  projects = JSON.parse(sessionStorage.getItem("projects") || "{}")
-  certificates = JSON.parse(sessionStorage.getItem("certificates") || "{}")
-  educations = JSON.parse(sessionStorage.getItem("educations") || "{}")
+  personal_info = JSON.parse(localStorage.getItem("personal_info")! || "{}")
+  summary = JSON.parse(localStorage.getItem("summary") || "{}")
+  skills = JSON.parse(localStorage.getItem("skills") || "{}")
+  languages = JSON.parse(localStorage.getItem("languages") || "{}")
+  projects = JSON.parse(localStorage.getItem("projects") || "{}")
+  certificates = JSON.parse(localStorage.getItem("certificates") || "{}")
+  educations = JSON.parse(localStorage.getItem("educations") || "{}")
 
   linkedin_icon = faLinkedin
   github_icon = faGithub

@@ -25,7 +25,7 @@ export class ResumeInfoContainerComponent {
     window.print()
   }
   resetResume() {
-    sessionStorage.clear()
+    localStorage.clear()
     location.reload()
   }
 }

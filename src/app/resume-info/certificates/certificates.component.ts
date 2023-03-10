@@ -18,14 +18,14 @@ export class CertificatesComponent {
   certificate(data: NgForm) {
     this.certificate_name = data.value.certificate;
     this.certificates.push({ certificate: this.certificate_name, certificate_points: this.certificate_points })
-    sessionStorage.setItem('certificates', JSON.stringify(this.certificates))
+    localStorage.setItem('certificates', JSON.stringify(this.certificates))
     this.certificate_points = [];
     (<HTMLInputElement>document.querySelector('input[name="certificate"]')).value = '';
   }
 
   reset(data: NgForm) {
     data.resetForm()
-    sessionStorage.removeItem("certificates")
+    localStorage.removeItem("certificates")
     this.certificates = []
   }
 }

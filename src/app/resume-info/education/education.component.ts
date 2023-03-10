@@ -12,14 +12,14 @@ export class EducationComponent {
 
   education(data: NgForm) {
     this.educations.push(data.value)
-    sessionStorage.setItem('educations', JSON.stringify(this.educations));
+    localStorage.setItem('educations', JSON.stringify(this.educations));
     (<HTMLInputElement>document.querySelector('input[name="degree_name"]')).value = '';
     (<HTMLInputElement>document.querySelector('input[name="college_name"]')).value = '';
   }
 
   reset(data: NgForm) {
     data.resetForm()
-    sessionStorage.removeItem("educations")
+    localStorage.removeItem("educations")
     this.educations = []
   }
 }
