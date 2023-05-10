@@ -20,6 +20,10 @@
       <fa-icon [icon]="mobile_icon"></fa-icon>
       <a href="tel:{{ personal_info.mobile }}"> {{ personal_info.mobile }}</a>
     </h5>
+    <h5 class="link" *ngIf="personal_info.portfolio">
+      <fa-icon [icon]="portfolio"></fa-icon>
+      <a href="{{ personal_info.portfolio }}"> Portfolio</a>
+    </h5>
   </header>
   <div class="left">
     <div *ngIf="skills.length">

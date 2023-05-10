@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faMobileAndroid, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faMobileAndroid, faGlobe, faFileCode } from "@fortawesome/free-solid-svg-icons";
 // import { PersonalInfo } from 'src/abstract_classes/personal-info';
 
 @Component({
@@ -25,4 +25,5 @@ export class Template1Component {
   email_icon = faEnvelope
   mobile_icon = faMobileAndroid
   internet_icon = faGlobe
+  portfolio = faFileCode
 }
